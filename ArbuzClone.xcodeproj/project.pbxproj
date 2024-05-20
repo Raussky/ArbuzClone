@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		911D41812BFA7433009DB60A /* ArbuzCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D41802BFA7433009DB60A /* ArbuzCloneApp.swift */; };
-		911D41832BFA7433009DB60A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D41822BFA7433009DB60A /* ContentView.swift */; };
 		911D41852BFA7435009DB60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911D41842BFA7435009DB60A /* Assets.xcassets */; };
 		911D41882BFA7435009DB60A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911D41872BFA7435009DB60A /* Preview Assets.xcassets */; };
+		91A3880D2BFAA7C60050A346 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A3880C2BFAA7C60050A346 /* WelcomeView.swift */; };
+		91A3880F2BFAA85D0050A346 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A3880E2BFAA85D0050A346 /* Launch Screen.storyboard */; };
+		91A388142BFAB1AD0050A346 /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A388132BFAB1AD0050A346 /* ScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		911D417D2BFA7433009DB60A /* ArbuzClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArbuzClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		911D41802BFA7433009DB60A /* ArbuzCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArbuzCloneApp.swift; sourceTree = "<group>"; };
-		911D41822BFA7433009DB60A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		911D41842BFA7435009DB60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		911D41872BFA7435009DB60A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		91A3880C2BFAA7C60050A346 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		91A3880E2BFAA85D0050A346 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		91A388132BFAB1AD0050A346 /* ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,13 @@
 		911D417F2BFA7433009DB60A /* ArbuzClone */ = {
 			isa = PBXGroup;
 			children = (
+				91A3880A2BFAA5B00050A346 /* ViewModel */,
+				91A388092BFAA5A40050A346 /* Model */,
+				91A388082BFAA5980050A346 /* View */,
 				911D41802BFA7433009DB60A /* ArbuzCloneApp.swift */,
-				911D41822BFA7433009DB60A /* ContentView.swift */,
 				911D41842BFA7435009DB60A /* Assets.xcassets */,
 				911D41862BFA7435009DB60A /* Preview Content */,
+				91A3880E2BFAA85D0050A346 /* Launch Screen.storyboard */,
 			);
 			path = ArbuzClone;
 			sourceTree = "<group>";
@@ -65,6 +72,45 @@
 				911D41872BFA7435009DB60A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		91A388082BFAA5980050A346 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91A3880B2BFAA7B80050A346 /* Login */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		91A388092BFAA5A40050A346 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91A388102BFAB0F80050A346 /* Login */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91A3880A2BFAA5B00050A346 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		91A3880B2BFAA7B80050A346 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				91A3880C2BFAA7C60050A346 /* WelcomeView.swift */,
+				91A388132BFAB1AD0050A346 /* ScreenView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		91A388102BFAB0F80050A346 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +171,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A3880F2BFAA85D0050A346 /* Launch Screen.storyboard in Resources */,
 				911D41882BFA7435009DB60A /* Preview Assets.xcassets in Resources */,
 				911D41852BFA7435009DB60A /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				911D41832BFA7433009DB60A /* ContentView.swift in Sources */,
 				911D41812BFA7433009DB60A /* ArbuzCloneApp.swift in Sources */,
+				91A388142BFAB1AD0050A346 /* ScreenView.swift in Sources */,
+				91A3880D2BFAA7C60050A346 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +245,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -254,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -278,8 +326,11 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +338,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rauan.ArbuzClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,8 +362,11 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +374,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = rauan.ArbuzClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
