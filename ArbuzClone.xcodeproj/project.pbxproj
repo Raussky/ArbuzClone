@@ -10,6 +10,8 @@
 		911D41812BFA7433009DB60A /* ArbuzCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911D41802BFA7433009DB60A /* ArbuzCloneApp.swift */; };
 		911D41852BFA7435009DB60A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911D41842BFA7435009DB60A /* Assets.xcassets */; };
 		911D41882BFA7435009DB60A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911D41872BFA7435009DB60A /* Preview Assets.xcassets */; };
+		9135DEFC2BFBBED00039F813 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135DEFB2BFBBED00039F813 /* MainView.swift */; };
+		9135DEFE2BFBBEED0039F813 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9135DEFD2BFBBEED0039F813 /* HomeView.swift */; };
 		91A3880D2BFAA7C60050A346 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A3880C2BFAA7C60050A346 /* WelcomeView.swift */; };
 		91A3880F2BFAA85D0050A346 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91A3880E2BFAA85D0050A346 /* Launch Screen.storyboard */; };
 		91A388142BFAB1AD0050A346 /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A388132BFAB1AD0050A346 /* ScreenView.swift */; };
@@ -20,6 +22,8 @@
 		911D41802BFA7433009DB60A /* ArbuzCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArbuzCloneApp.swift; sourceTree = "<group>"; };
 		911D41842BFA7435009DB60A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		911D41872BFA7435009DB60A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9135DEFB2BFBBED00039F813 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		9135DEFD2BFBBEED0039F813 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		91A3880C2BFAA7C60050A346 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		91A3880E2BFAA85D0050A346 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		91A388132BFAB1AD0050A346 /* ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
@@ -74,9 +78,27 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9135DEF92BFBBEB80039F813 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9135DEFD2BFBBEED0039F813 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9135DEFA2BFBBEBE0039F813 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				9135DEFB2BFBBED00039F813 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		91A388082BFAA5980050A346 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9135DEFA2BFBBEBE0039F813 /* Main */,
+				9135DEF92BFBBEB80039F813 /* Home */,
 				91A3880B2BFAA7B80050A346 /* Login */,
 			);
 			path = View;
@@ -185,7 +207,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				911D41812BFA7433009DB60A /* ArbuzCloneApp.swift in Sources */,
+				9135DEFC2BFBBED00039F813 /* MainView.swift in Sources */,
 				91A388142BFAB1AD0050A346 /* ScreenView.swift in Sources */,
+				9135DEFE2BFBBEED0039F813 /* HomeView.swift in Sources */,
 				91A3880D2BFAA7C60050A346 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

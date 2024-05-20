@@ -87,7 +87,7 @@ struct ScreenView: View {
             }
             Spacer()
             Button {
-                currentPage = 4
+                currentPage = 3
             } label: {
                 Text("Пропустить")
                     .fontWeight(.semibold)
@@ -103,11 +103,11 @@ struct ScreenView: View {
                 ZStack(alignment: .leading) {
                     Rectangle()
                         .frame(height: 5)
-                        .foregroundColor(index < currentPage - 1 ? Color.green : Color.gray)
+                        .foregroundColor(index < currentPage - 1 ? Color.white : Color.gray)
                     if index == currentPage - 1 {
                         Rectangle()
                             .frame(width: CGFloat(progress) * (UIScreen.main.bounds.width / CGFloat(totalPages) - 15), height: 5)
-                            .foregroundColor(Color.green)
+                            .foregroundColor(Color.white)
                             .animation(.linear, value: progress)
                     }
                 }
@@ -123,7 +123,7 @@ struct ScreenView: View {
                 currentPage += 1
                 progress = 0.0
             } else {
-                currentPage = 1
+                currentPage += 1
             }
         } label: {
             Text(currentPage == totalPages ? "Начать покупки" : "Продолжить")
