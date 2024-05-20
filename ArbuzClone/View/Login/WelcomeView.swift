@@ -6,26 +6,6 @@
 //
 
 import SwiftUI
-
-struct Home:View {
-    var body: some View {
-        Text("home")
-    }
-}
-
-struct MainView:View {
-    @AppStorage("currentPage") var currentPage = 1
-    
-    var body: some View {
-        if currentPage > totalPages {
-            Home()
-        }
-        else {
-            WelcomeView()
-        }
-    }
-}
-
 var totalPages = 3
 
 struct WelcomeView:View {
