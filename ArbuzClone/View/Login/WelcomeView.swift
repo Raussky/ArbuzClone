@@ -7,25 +7,6 @@
 
 import SwiftUI
 
-struct Home:View {
-    var body: some View {
-        Text("home")
-    }
-}
-
-struct MainView:View {
-    @AppStorage("currentPage") var currentPage = 1
-    
-    var body: some View {
-        if currentPage > totalPages {
-            Home()
-        }
-        else {
-            WelcomeView()
-        }
-    }
-}
-
 var totalPages = 3
 
 struct WelcomeView:View {
@@ -38,10 +19,10 @@ struct WelcomeView:View {
                 ScreenView(image: "onboarding", title: "Order Food", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel.")
             }
             if currentPage == 2{
-                ScreenView(image: "onboarding", title: "Easy Delivery", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel.")
+                ScreenView(image: "onboarding2", title: "Easy Delivery", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel.")
             }
             if currentPage == 3{
-                ScreenView(image: "onboarding", title: "Fast Delivery", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel.")
+                ScreenView(image: "onboarding3", title: "Fast Delivery", detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,molestiae quas vel.")
             }
         }
         
