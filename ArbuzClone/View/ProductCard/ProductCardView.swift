@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ProductCardView: View {
+    @Binding var cartItems: [CartProduct]
     var product: Product
     @State private var showingDetail = false
     @State private var quantity: Int = 0
     @State private var isFavorite: Bool
 
-    init(product: Product) {
+    init(product: Product, cartItems: Binding<[CartProduct]>) {
         self.product = product
-        _isFavorite = State(initialValue: product.isFavorite)
+        self._cartItems = cartItems
+        self._isFavorite = State(initialValue: product.isFavorite)
     }
     var body: some View {
         VStack(alignment: .center){
@@ -41,7 +43,7 @@ struct ProductCardView: View {
                                         .foregroundColor(.green)
                                         .font(.subheadline)
                                 } else {
-                                    HStack{
+                                    HStack {
                                         Text("\(product.price, specifier: "%.0f") Т/шт")
                                             .foregroundColor(.gray)
                                             .font(.subheadline)
@@ -57,7 +59,7 @@ struct ProductCardView: View {
                 }
             }
             .sheet(isPresented: $showingDetail) {
-                ProductDetailPresenter(product: product)
+                ProductDetailPresenter(product: product, cartItems: $cartItems)
             }
             if quantity == 0 {
                 addButton
@@ -76,6 +78,7 @@ struct ProductCardView: View {
            Button(action: {
                withAnimation {
                    quantity = 1
+                   addToCart(product: product, quantity: quantity)
                }
            }) {
                HStack {
@@ -98,10 +101,12 @@ struct ProductCardView: View {
                    if quantity > 1 {
                        withAnimation {
                            quantity -= 1
+                           updateCart(product: product, quantity: quantity)
                        }
                    } else {
                        withAnimation {
                            quantity = 0
+                           updateCart(product: product, quantity: quantity)
                        }
                    }
                }) {
@@ -116,6 +121,7 @@ struct ProductCardView: View {
                Button(action: {
                    withAnimation {
                        quantity += 1
+                       updateCart(product: product, quantity: quantity)
                    }
                }) {
                    Image(systemName: "plus")
@@ -128,5 +134,23 @@ struct ProductCardView: View {
            .background(Color.green)
            .cornerRadius(15)
        }
+    
+    func addToCart(product: Product, quantity: Int) {
+        if let index = cartItems.firstIndex(where: { $0.product.id == product.id }) {
+            cartItems[index].quantity += quantity
+        } else {
+            cartItems.append(CartProduct(product: product, quantity: quantity))
+        }
+    }
+
+    func updateCart(product: Product, quantity: Int) {
+        if let index = cartItems.firstIndex(where: { $0.product.id == product.id }) {
+            if quantity == 0 {
+                cartItems.remove(at: index)
+            } else {
+                cartItems[index].quantity = quantity
+            }
+        }
+    }
 }
 
