@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct MainView:View {
+    @Binding var cartItems: [CartProduct]
     @AppStorage("currentPage") var currentPage = 1
     
     var body: some View {
         if currentPage > totalPages {
-            HomeView()
+            ContentView()
         }
         else {
             WelcomeView()
@@ -20,6 +21,6 @@ struct MainView:View {
     }
 }
 
-#Preview {
-    MainView()
-}
+//#Preview {
+//    MainView()
+//}
